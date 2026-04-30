@@ -1,0 +1,49 @@
+image: atlassian/default-image:4
+
+pipelines:
+  branches:
+    feature/deployment:
+      - step:
+          name: Build & Push UI Image
+          size: 2x
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - export IMAGE="weledevacr-gpenb5fmhme5adb7.azurecr.io/wele-ui:dev"
+
+            - echo "$ACR_PASSWORD" | docker login weledevacr-gpenb5fmhme5adb7.azurecr.io -u "$ACR_USERNAME" --password-stdin
+
+            - printf "VITE_API_BASE_URL=%s\n" "https://app.wele.in/api" > .env.development
+            - printf "VITE_KEYCLOAK_CLIENT_ID=%s\n" "$VITE_KEYCLOAK_CLIENT_ID" >> .env.development
+            - printf "VITE_KEYCLOAK_CLIENT_SECRET=%s\n" "$VITE_KEYCLOAK_CLIENT_SECRET" >> .env.development
+            - printf "VITE_APP_ENCRYPTION_KEY=%s\n" "$VITE_APP_ENCRYPTION_KEY" >> .env.development
+            - printf "VITE_GOOGLE_CLIENT_ID=%s\n" "$VITE_GOOGLE_CLIENT_ID" >> .env.development
+
+            - docker build -t "$IMAGE" .
+            - docker push "$IMAGE"
+
+      - step:
+          name: Deploy UI to Kubernetes (wele-dev)
+          script:
+            - curl -LO "https://dl.k8s.io/release/$(curl -Ls https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+            - chmod +x kubectl
+            - mv kubectl /usr/local/bin/kubectl
+
+            - echo "$KUBE_CONFIG_B64" | base64 -d > kubeconfig
+            - export KUBECONFIG="$PWD/kubeconfig"
+
+            - kubectl version --client
+            - kubectl get ns wele-dev
+
+            - kubectl -n wele-dev apply -f k8s/ui-deployment.yaml
+            - kubectl -n wele-dev apply -f k8s/ui-service.yaml
+            - kubectl -n wele-dev apply -f k8s/ui-ingressroute.yaml
+
+            - kubectl -n wele-dev rollout restart deploy/wele-ui
+            - kubectl -n wele-dev rollout status deploy/wele-ui
+definitions:
+  services:
+    docker:
+      memory: 4096

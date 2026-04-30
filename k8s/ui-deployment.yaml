@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wele-ui
+  namespace: wele-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wele-ui
+  template:
+    metadata:
+      labels:
+        app: wele-ui
+    spec:
+      imagePullSecrets:
+        - name: acr-pull-secret
+      containers:
+        - name: wele-ui
+          image: weledevacr-gpenb5fmhme5adb7.azurecr.io/wele-ui:dev
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8082

@@ -1,0 +1,521 @@
+ 
+ 
+ 
+WE-LE  
+Product Requirements Document 
+Version: 1.0 
+ 
+Executive Summary 
+WE-LE is building a Learning Universe centered on Personalized Learning. 
+WE-LE is a personalized learning and career transformation platform designed to help 
+students, working professionals, and career switchers learn job-ready skills through courses, 
+AI tools, mentor guidance, real-world simulations, and portfolio creation. 
+Unlike traditional e-learning platforms that give the same content to everyone, WE-LE uses 
+AI to personalize learning paths, recommend the right lesx`x`sons, and prepare learners for 
+interviews with mock interviews and SkillVerse simulations. 
+Our Learning Universe concept means: Every learner enters their own personalized 
+galaxy of content, mentors, communities, and opportunities tailored specifically to their 
+goals, strengths, and career aspirations. No two learning journeys are the same. 
+This PRD aims to deeply describe the complete product scope, including learning modules, 
+AI systems, workflows, user experience, and business outcomes that power this 
+personalized learning universe. 
+The platform creates a continuous improvement cycle: understand the learner → 
+personalize their journey → teach them → test their knowledge → help them practice 
+→ showcase their skills → connect them with mentors and employers. 
+ 
+ 
+2. Who This Is For & What We Want to Achieve 
+Who uses WE-LE? 
+● College students preparing for their first job 
+● Job seekers looking to switch careers 
+● Working professionals wanting to upskill 
+● Anyone who wants to learn tech skills and get hired 
+ 
+What success looks like for our business: 
+● More people sign up for paid courses 
+● Learners complete courses and get jobs in their field 
+● People buy mentorship sessions and come back for more courses 
+● We build a reputation as a platform that actually gets people hired 
+● Companies start coming to us to find trained candidates 
+How we measure success: 
+● Learner outcomes: How many learners publish portfolios and get interview calls 
+● Engagement: How many people stick around after week 1 and week 4 
+● Revenue: Course purchases, mentor bookings, webinar sponsorships 
+3. Core Features 
+Each feature below is described in simple terms: what it does, why it matters, how it works, 
+and what "done" looks like. 
+3.1 Career Compass — Understanding Each Learner From Day One 
+What it is: 
+ Career Compass is the entry point to your personalized Learning Universe. It's a smart 
+assessment that figures out what kind of career path suits each learner best. It's the first 
+thing learners see when they sign up. 
+How it works: 
+ When someone joins WE-LE, they take a 30-question assessment. The questions adapt 
+based on their answers — if they show interest in coding, they get more coding questions; if 
+they lean toward design, they get design questions. 
+The quiz covers all our learning tracks: 
+● Development (coding/programming) 
+● Design (UI/UX) 
+● DevOps/Cloud (infrastructure) 
+● AI/ML (artificial intelligence) 
+● Product Management 
+● Operations 
+● Marketing 
+The first 10 questions are easy and broad to understand general interests. The next 10 
+questions dive deeper into the top 2 areas where they showed strength. The final 10 
+questions are practical scenarios that test how they think and solve problems. 
+What the learner gets: 
+ After completing Career Compass, learners see: 
+ 
+● A dashboard showing which career tracks suit them best (with visual bars showing 
+strength in each area) 
+● 3 job roles they could aim for (either now or after some learning) 
+● A clear list of 3–6 things they need to improve (like "learn React" or "practice 
+problem-solving") 
+● A recommended learning path with an 8–12 week timeline 
+● A button to start their personalized journey right away 
+Why this matters for business: 
+ Career Compass is how we create each learner's personalized universe. It helps us 
+understand each person deeply from day one, so we can recommend the right courses, 
+mentors, and content — which keeps people engaged and more likely to pay for premium 
+features. 
+What "done" looks like: 
+● The quiz runs smoothly from start to finish 
+● Results are saved to the learner's profile 
+● The system shows accurate career track matches 
+● At least 3 job roles are recommended 
+● A learning pathway is generated with milestones 
+● The learner can start their recommended path with one click 
+3.2 Level Up AI — Your Personal Learning Coach in the Universe 
+What it is: 
+ Level Up AI is your personal guide through the WE-LE Learning Universe. It's an AI 
+assistant that acts like a personal tutor, always available to answer questions, suggest what 
+to learn next, and keep learners on track. 
+How it works: 
+ Unlike a regular chatbot, Level Up AI knows everything about the learner — their Career 
+Compass results, quiz scores, mock interview performance, and course progress. When 
+someone asks "How do I get better at debugging?" Level Up AI doesn't give a generic 
+answer. Instead, it says: 
+*"Based on your profile, try these 3 things: 
+1. Complete the 8-minute Debugging Basics micro-lesson 
+2. Practice in the Debug Challenge SkillVerse scenario (20 minutes) 
+3. Book a 30-minute session with Mentor Sarah who specializes in debugging 
+What makes it Unique: 
+● Understands what the learner already knows 
+● Only recommends content they have access to (or clearly shows paid add-ons) 
+● Explains why each recommendation fits their goals 
+● Shows progress summaries when asked ("How am I doing?") 
+● Sends optional reminders about upcoming sessions or pending tasks
+ 
+Why this matters for business: 
+ Level Up AI is the navigation system in our Learning Universe. It keeps learners engaged by 
+making learning feel personal and actionable. It also drives revenue by smartly suggesting 
+mentor sessions and additional courses when appropriate. 
+What "done" looks like: 
+● The AI responds with helpful recommendations 90% of the time 
+● Every recommendation links to actual content (courses, mentors, practice scenarios) 
+● At least 20% of suggestions lead to action (learner clicks and starts) 
+● The AI explains why it's making each suggestion 
+● Learners can turn notifications on or off 
+What we need: 
+● Access to Career Compass results 
+● Real-time tracking of learner progress 
+● Course and mentor availability data 
+● Safety controls to prevent inappropriate responses 
+● Conversation logs for improvement 
+3.3 AI Mock Interview — Practice Before the Real Thing 
+What it is: 
+ AI Mock Interview lets learners practice job interviews with an AI interviewer. It feels like a 
+real interview and gives detailed feedback afterward. This is part of the skills validation layer 
+in our Learning Universe. 
+How it works: 
+ Learners can book a mock interview session. The AI creates questions based on: 
+● The course they're taking 
+● Their Career Compass results 
+● Their resume and portfolio 
+● The job role they're targeting 
+The mock interview has two parts: 
+Part 1 — The Interview: 
+ The learner answers questions (they can type or speak). The AI asks follow-up questions 
+based on their answers, just like a real interviewer would. 
+Part 2 — The Feedback: 
+ After the interview, the system provides: 
+● An overall score 
+● Sub-scores for communication, problem-solving, and technical knowledge 
+● A transcript of the conversation 
+● 5 specific things to improve
+ 
+● Recommended micro-lessons and practice scenarios 
+● Suggestion to book a mentor for deeper coaching 
+Why this matters for business: 
+ Interview practice is incredibly valuable — it directly improves job placement rates. This is a 
+premium feature people will pay for, and it builds confidence that WE-LE actually prepares 
+people for real jobs. 
+Pricing approach: 
+● Include 2 mock interviews with premium course packages 
+● Offer individual sessions for purchase 
+● Consider giving one free trial to show value 
+What "done" looks like: 
+● The mock interview runs without technical issues 
+● Transcription is at least 90% accurate 
+● Feedback report is ready within minutes 
+● Learners can replay their interview recording 
+● The scoring reasonably matches what a human would score (we'll test this with real 
+mentors) 
+Success metrics: 
+● How many learners retake mocks after getting feedback 
+● Whether scores improve on the second attempt 
+● How many mock interview takers book mentor sessions afterward 
+What we need: 
+● Question bank organized by job role and skill level 
+● Speech-to-text technology 
+● Scoring system (with human review initially) 
+● Video/audio recording infrastructure 
+● Privacy controls (learners can delete recordings) 
+ 
+3.4 Session Wrap-up Quiz — Learning by Testing 
+What it is: 
+ After every class or video session, learners get a short quiz (4–8 questions) to test what 
+they just learned. This creates a continuous feedback loop in the Learning Universe. 
+How it works: 
+ The system automatically creates quiz questions based on what was covered in the 
+session. Questions test understanding and practical application, not just memorization. 
+When learners submit answers:
+ 
+● They get instant feedback with explanations 
+● Their results are saved to their profile 
+● If they score below 60%, the system marks that topic as "needs work" 
+● Level Up AI automatically suggests extra practice 
+For instructors and admins, there's a dashboard showing: 
+● How the whole class performed 
+● Which concepts most people struggled with 
+● Which learners might need extra help 
+Why this matters for business: 
+ Frequent testing helps people remember more (proven learning science). It also gives us 
+data to improve courses and personalize recommendations. When we can show "95% of our 
+students master this concept," it's powerful marketing. 
+What "done" looks like: 
+● Quizzes appear within 15 minutes after each session 
+● Questions match what was taught (80% relevance or higher) 
+● Low-scoring learners automatically get practice suggestions 
+● Trainers can see class performance summaries 
+What we need: 
+● Question bank tagged by topic and difficulty 
+● Way to map each session to relevant questions 
+● Storage for quiz results by skill area 
+● Dashboard for trainers 
+3.5 Personalized Mentorship — Human Guidance  
+What it is: 
+ In the WE-LE Learning Universe, every learner gets access to experienced guides — 
+mentors who provide one-on-one guidance. It's a marketplace where learners can find the 
+right mentor for their unique journey. 
+How it works: 
+ Each mentor has a profile showing: 
+● Their area of expertise 
+● Verified credentials and badges 
+● Hourly rate 
+● Available time slots 
+● Ratings from previous learners 
+The system recommends mentors based on: 
+● The learner's Career Compass results 
+● Areas where they need help (from quizzes and mock interviews) 
+ 
+● Mentor's specialization 
+● Ratings and reviews 
+Types of mentorship: 
+● Career coaching: Planning career moves, resume reviews 
+● Technical coaching: Code reviews, debugging help, architecture guidance 
+● Portfolio coaching: Improving project presentations 
+● Interview prep: Practice and strategy 
+Booking and payment: 
+● Some courses include mentor credits (e.g., 2 sessions included) 
+● Learners can buy individual sessions 
+● Subscription option for ongoing mentorship 
+After each session: 
+● Mentors write brief notes on what was covered 
+● They can endorse specific skills on the learner's profile 
+● Learners rate the session 
+● Notes appear in the learner's profile and inform Level Up AI recommendations 
+Why this matters for business: 
+ Mentorship is a major revenue source and keeps people engaged. It also creates trust — 
+having real experts validate your skills is powerful for getting hired. 
+Quality control: 
+● Mentors go through a vetting process 
+● We track performance (ratings, learner outcomes) 
+● Low-performing mentors are put on probation or removed 
+What "done" looks like: 
+● Learners can search and book mentors 
+● Booking confirmation and calendar invite work 
+● Mentor notes are saved and visible 
+● Payment processing works smoothly 
+● Ratings are collected after sessions 
+Success metrics: 
+● How many mentors have regular bookings 
+● Average rating (target: 4.5 out of 5) 
+● How many learners book mentors again 
+● Revenue from mentorship 
+What we need:
+ 
+● Mentor profiles and verification system 
+● Calendar and booking system 
+● Payment processing with mentor payouts 
+● Rating and review system 
+● Way to handle disputes or cancellations 
+3.6 Skills Showcase — Your Living Portfolio 
+What it is: 
+ Skills Showcase is your personal proof-of-learning in the WE-LE Universe. It's an online 
+portfolio that grows as learners complete projects, courses, and challenges. It's proof of what 
+they can do. 
+How it works: 
+ Every time a learner completes something meaningful (a project, a SkillVerse challenge, a 
+course), they can add it to their Skills Showcase. Each portfolio item includes: 
+● What the problem was: Context and challenge 
+● What they built: Link to demo, code, or artifact 
+● Technologies used: Tools and skills applied 
+● Skill tags: Which skills this demonstrates (and proficiency level) 
+● AI summary: Auto-generated description 
+● Verification badge: Optional mentor or peer review 
+● Outcome notes: Like "won hackathon" or "deployed to 100 users" 
+Portfolio building workflow: 
+1. Learner completes a project 
+2. System suggests a portfolio template 
+3. Learner fills in details 
+4. Optional: Request mentor verification 
+5. Mentor reviews and adds verification badge 
+6. Learner publishes or keeps private 
+Skill proficiency calculation: 
+ The system combines multiple signals to show skill level: 
+● Quiz scores in that skill 
+● Mock interview performance 
+● Mentor ratings 
+● Project complexity 
+Sharing: 
+ Learners get a public link they can share with employers. They control what's visible — can 
+keep some items private or anonymous. 
+Why this matters for business: 
+ A strong portfolio is what gets people hired. When employers see verified, real work, they
+ 
+trust it. Over time, we can connect high-performing portfolios with employer partners looking 
+to hire. 
+What "done" looks like: 
+● Learners can create and edit portfolio items 
+● Verification request workflow works (learner asks → mentor reviews → badge added) 
+● Public share links work and look professional 
+● Privacy controls let learners choose visibility 
+Success metrics: 
+● How many learners publish portfolios 
+● Percentage of items that get verified 
+● How many employer views each portfolio gets 
+● Interview calls that come from portfolio shares 
+What we need: 
+● Portfolio templates by project type 
+● Verification workflow 
+● Public page design (mobile-friendly) 
+● Privacy settings 
+● Analytics on portfolio views 
+3.7 Course Community — Learning Together in the Universe 
+What it is: 
+ Each course in the WE-LE Learning Universe has its own community space where current 
+students and alumni can connect, share, help each other, and find opportunities. Think of it 
+as your course's home base in the universe. 
+How it works: 
+ When someone enrolls in a course, they automatically join that course's community. Unlike 
+typical forums that die after the course ends, WE-LE communities are ongoing — new 
+batches join the same community, so it grows over time. 
+What's in a community: 
+● Announcements: Important updates from instructors 
+● Discussion threads: Questions, tips, resources 
+● Resource library: Shared notes, tools, references 
+● Job board: Opportunities shared by alumni or employers 
+● Alumni highlights: Success stories and career updates 
+● Events: Community webinars and mentor Q&A sessions 
+Different roles: 
+● Learners: Can post, comment, share resources 
+● Alumni: Same as learners, plus can post job opportunities
+ 
+● Mentors: Can host Q&A sessions 
+● Admins: Can pin posts, moderate, organize events 
+Why this matters for business: 
+ Communities keep people engaged after courses end. They create word-of-mouth 
+marketing when alumni share success stories. They also become a talent pool for employers 
+looking to hire from WE-LE. 
+What "done" looks like: 
+● New community created automatically for each course 
+● Auto-join works when someone enrolls 
+● Posting, commenting, and threading work smoothly 
+● Moderation tools available for admins 
+● Resources can be pinned for easy access 
+Success metrics: 
+● How many people post or comment per week 
+● How many learners are referred by community members 
+● How engaged people stay after course ends 
+What we need: 
+● Community platform (forums or chat-style) 
+● Moderation tools 
+● Different permission levels 
+● Search functionality 
+● Integration with courses 
+3.8 Webinars — Live Learning Events in the Universe 
+What it is: 
+ Webinars are live online events on specific topics — like constellation events in our 
+Learning Universe. They serve multiple purposes: attracting new learners, educating current 
+students, and connecting with employers. 
+Types of webinars: 
+1. Free/Public Webinars (Lead Generation): 
+● Introduction to career paths 
+● Industry trends 
+● Free workshops 
+● Goal: Get people interested in WE-LE courses 
+2. Premium Webinars (For Paid Learners): 
+● Advanced deep-dives 
+● Expert guest sessions 
+ 
+● Exclusive Q&As 
+● Goal: Add value to paid courses 
+3. Sponsored Webinars (Employer Partnerships): 
+● Companies showcase opportunities 
+● Hiring managers share what they look for 
+● Goal: Generate revenue and connect learners with jobs 
+How it works: 
+● Webinars are scheduled with topic, speaker, date 
+● People register in advance 
+● Live session with Q&A, polls, chat 
+● Recording available afterward with resources 
+● Attendance tracked (certificates if applicable) 
+Where webinars appear: 
+● Course pages (related webinars) 
+● Community feeds 
+● Marketing emails 
+● Landing pages 
+Why this matters for business: 
+ Webinars bring in new learners (free events), add value to paid courses (premium content), 
+and generate revenue through sponsorships. They also help learners understand what 
+companies want, improving job placement. 
+What "done" looks like: 
+● Webinars can be scheduled and promoted 
+● Registration system works 
+● Live session runs smoothly (video, audio, chat) 
+● Recording is available afterward 
+● Attendance is tracked 
+Success metrics: 
+● How many webinar attendees sign up for courses 
+● Attendee satisfaction (post-event survey) 
+● Sponsor return on investment (leads generated) 
+What we need: 
+● Webinar hosting platform 
+● Registration system 
+● Recording and storage 
+● Integration with course recommendations 
+● Analytics on conversion 
+ 
+4. How Everything Works Together in the Learning 
+Universe 
+The Golden Rule: Everything connects to a single learner profile — your personal ID in the 
+Learning Universe. 
+All features write to and read from one central place: 
+● Career Compass results 
+● Quiz scores 
+● Mock interview reports 
+● Mentor session notes 
+● Portfolio items 
+● Community activity 
+● Course progress 
+This means: 
+● Level Up AI can give smart recommendations 
+● Mentors see the full picture 
+● Reporting shows complete learner journey 
+● Employers can see verified capabilities 
+Access and Entitlements: 
+ The system needs to know what each learner has access to in their personalized universe: 
+● Which courses they've purchased 
+● How many mock interviews are included 
+● Mentor session credits remaining 
+● Premium vs free features 
+Transparency: 
+ Whenever the system makes a recommendation or decision, it shows why: 
+● "We recommend this because your Career Compass showed interest in frontend 
+development and your last quiz indicated you need practice with React." 
+Privacy and Control: 
+● Learners must agree before video/audio recording 
+● They control what's public in their portfolio 
+● They can view, download, or delete their data 
+● Clear roles control who sees what (learner, mentor, admin, employer) 
+Quality Control: 
+ For critical AI features (Career Compass scoring, mock interview feedback), we start with 
+human review to ensure quality before fully automating. 
+What's Free vs Paid:
+ 
+● Free: Career Compass, basic Level Up AI, portfolio creation, course communities 
+● Included in course purchase: Some mock interviews and mentor credits 
+● Paid add-ons: Extra mock interviews, additional mentor sessions, premium Level Up 
+AI features 
+● Revenue opportunities: Mentorship marketplace, webinar sponsorships, employer 
+partnerships 
+5. Success Metrics by Feature 
+Here's how we measure if each part of our Learning Universe is working: 
+Career Compass: 
+● Completion rate  
+● How many start the recommended path  
+● How many get hired in recommended roles  
+Level Up AI: 
+● Recommendation acceptance rate 
+● Daily active users 
+● Retention improvement vs learners without AI 
+AI Mock Interview: 
+● Repeat attempt rate 
+● Score improvement on retakes 
+● Mentor booking rate after mocks 
+Session Wrap-up Quiz: 
+● Completion rate per session 
+● Extra practice acceptance rate 
+● Score improvement after extra practice 
+Mentorship: 
+● Mentor utilization (how booked they are) 
+● Average rating (target: 4.5+) 
+● Repeat booking rate 
+● Revenue from mentorship 
+Skills Showcase: 
+● Portfolio publish rate 
+● Verification badge rate 
+● Employer clicks and views 
+● Interview calls from portfolios 
+ 
+Course Community: 
+● Posts per active user 
+● Referrals from community 
+● Retention lift 
+Webinars: 
+● Registration to attendance rate 
+● Attendee to signup conversion 
+● Sponsor satisfaction 
+Overall Business Metrics: 
+● Pathway completion rate 
+● Learners with verified portfolios 
+● Interview call rate within 4 months 
+● Lifetime value to customer acquisition cost ratio 
+ 
+Building in Phases 
+We don't build the entire Learning Universe at once. Here's the Phase Split ups 
+Phase1 — MVP (2-3 months) 
+Goal: Build the core system that everything else relies on 
+● Create learner profile system 
+● Set up course catalog structure 
+● Career Compass (working but simple) 
+● Level Up AI (advanced features) 
+● Build basic tracking (who's in which course, what they've completed) 
+● Create Career Compass with manual scoring (humans review first) 
+● Test with 50-100 learners 
+Phase 2 — (2 - 3 months) 
+Goal: Launch core learning experience 
+● Level Up AI (basic recommendations with templates) 
+● Session Wrap-up Quizzes 
+● Portfolio creation (basic version) 
+● Course Communities (basic forums) 
+● Webinar scheduling 
+Phase 3 — Monetization (3-4 months)
+ 
+Goal: Add revenue-generating features 
+● AI Mock Interview (version 1) 
+● Mentor marketplace (booking and payments) 
+● Portfolio verification system 
+● Payment processing 

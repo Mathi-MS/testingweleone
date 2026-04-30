@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .input-default {
+        @apply border border-gray-300 rounded-lg px-4 py-2 text-sm text-gray-900 bg-white placeholder:text-gray-500 cursor-text shadow-sm transition duration-200 ease-in-out hover:border-gray-400 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 disabled:bg-gray-100 disabled:text-gray-400 disabled:border-gray-200 disabled:cursor-not-allowed;
+    }
+
+    .input-blank {
+        @apply border-b focus:outline-none text-gray-900 bg-transparent cursor-pointer disabled:bg-gray-50 disabled:cursor-not-allowed;
+    }
+
+    /* Red scrollbar for specific pages */
+    .red-scrollbar {
+        /* Webkit browsers (Chrome, Safari, Edge) */
+        scrollbar-width: none !important;
+        scrollbar-color: #dc2626 transparent;
+    }
+    
+    .red-scrollbar::-webkit-scrollbar {
+        width: 1px;
+        height: 1px;
+    }
+    
+    .red-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    .red-scrollbar::-webkit-scrollbar-thumb {
+        background: #dc2626;
+        border-radius: 0;
+    }
+    
+    .red-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #b91c1c;
+                scrollbar-width: none !important;
+
+    }
+    
+    .red-scrollbar::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+
+}
+
+.toast-message div{
+    margin: 0;
+    text-align: left;
+    display: block;
+}
+.Toastify__toast-container--bottom-center{
+    bottom: 45px !important;
+}
+
+.custom-toast {
+  background: #fff;
+  color: #1F2937;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  min-width: 450px;
+  max-width: 500px;
+  margin-bottom: 20px !important;
+}
+
+@media (max-width: 640px) {
+  .custom-toast {
+    min-width: 200px;
+    max-width: 90%;
+      border-radius: 12px !important;
+
+  }
+}

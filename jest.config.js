@@ -1,0 +1,30 @@
+export default {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  roots: ['<rootDir>/src'],
+  testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)+(spec|test).ts?(x)'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|png|jpg|jpeg)$': '<rootDir>/src/__mocks__/fileMock.js',
+    '\\.svg$': '<rootDir>/src/__mocks__/svgMock.tsx',
+    '^@apollo/client$': '<rootDir>/src/__mocks__/apolloClient.ts',
+    '^src/graphql/client$': '<rootDir>/src/graphql/__mocks__/client.ts',
+    '^../../graphql/client$': '<rootDir>/src/graphql/__mocks__/client.ts',
+    '^../../../graphql/client$': '<rootDir>/src/graphql/__mocks__/client.ts',
+    '^../../../../graphql/client$': '<rootDir>/src/graphql/__mocks__/client.ts',
+  },
+  transform: {
+    '^.+\\.tsx?$': '<rootDir>/jest-transformer.cjs',
+  },
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  setupFiles: ['<rootDir>/src/setupJest.ts'],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/main.tsx',
+    '!src/App.tsx',
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testPathIgnorePatterns: ['/node_modules/', '/src/modules/postverify/test.tsx', '/src/modules/admin/microlearning/__tests__/store.ts'],
+}

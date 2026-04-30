@@ -1,0 +1,169 @@
+/* ── TipTap Editor Shell ─────────────────────────────────────── */
+.tiptap-wrapper {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* ── Toolbar ─────────────────────────────────────────────────── */
+.tiptap-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+  align-items: center;
+}
+
+.tiptap-toolbar button,
+.tiptap-toolbar select {
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.tiptap-toolbar button:hover,
+.tiptap-toolbar select:hover {
+  background: #e5e7eb;
+}
+
+.tiptap-toolbar button.is-active {
+  background: #d1fae5;
+  color: #00BF53;
+  border-color: #00BF53;
+}
+
+.tiptap-toolbar .sep {
+  width: 1px;
+  height: 20px;
+  background: #e5e7eb;
+  margin: 0 4px;
+}
+
+.tiptap-toolbar select {
+  padding: 0 4px;
+  min-width: 80px;
+}
+
+/* ── Editor Content Area ─────────────────────────────────────── */
+.tiptap-editor {
+  min-height: 420px;
+  padding: 16px 20px;
+  outline: none;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+.tiptap-editor p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: #9ca3af;
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+.tiptap-editor h1 { font-size: 2em; font-weight: 700; margin: 0.6em 0 0.3em; }
+.tiptap-editor h2 { font-size: 1.5em; font-weight: 700; margin: 0.6em 0 0.3em; }
+.tiptap-editor h3 { font-size: 1.25em; font-weight: 600; margin: 0.5em 0 0.25em; }
+.tiptap-editor h4 { font-size: 1.1em; font-weight: 600; margin: 0.4em 0 0.2em; }
+.tiptap-editor ul { list-style: disc; padding-left: 1.5em; margin: 0.5em 0; }
+.tiptap-editor ol { list-style: decimal; padding-left: 1.5em; margin: 0.5em 0; }
+.tiptap-editor blockquote {
+  border-left: 4px solid #00BF53;
+  padding-left: 1em;
+  color: #6b7280;
+  margin: 1em 0;
+  font-style: italic;
+}
+.tiptap-editor pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+.tiptap-editor code { background: #f1f5f9; padding: 2px 5px; border-radius: 4px; font-size: 13px; }
+.tiptap-editor a { color: #00BF53; text-decoration: underline; }
+.tiptap-editor hr { border: none; border-top: 2px solid #e5e7eb; margin: 1.5em 0; }
+
+/* ── Images ──────────────────────────────────────────────────── */
+.tiptap-editor img {
+  max-width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+}
+
+/* resize-image extension wrapper */
+.tiptap-editor .image-resizer {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+}
+
+.tiptap-editor .image-resizer img {
+  display: block;
+}
+
+/* ── Image Row (side-by-side) ────────────────────────────────── */
+.tiptap-editor .image-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.tiptap-editor .image-row img {
+  flex: 1 1 0;
+  min-width: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ── Video / iFrame ──────────────────────────────────────────── */
+.tiptap-editor iframe,
+.tiptap-editor video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  margin: 8px 0;
+  border: none;
+}
+
+/* ── Table ───────────────────────────────────────────────────── */
+.tiptap-editor table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+.tiptap-editor th,
+.tiptap-editor td {
+  border: 1px solid #d1d5db;
+  padding: 6px 10px;
+  text-align: left;
+}
+.tiptap-editor th { background: #f3f4f6; font-weight: 600; }
+
+/* ── Color picker swatch ─────────────────────────────────────── */
+.color-swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  display: inline-block;
+}

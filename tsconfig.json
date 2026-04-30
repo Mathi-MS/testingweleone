@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src", "src/types/svg.d.ts", "src/vite-env.d.ts", "tailwind.config.js", "tsconfig.json", "tsconfig.node.json", "vite.config.js", "eslint.config.js", "postcss.config.js"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
