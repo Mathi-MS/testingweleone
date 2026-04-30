@@ -227,11 +227,11 @@ const EntityEditModel = ({ open, onClose, itemId }: Props) => {
   };
 
   const handleUniversitySearch = debounce((value: string) => {
-    dispatch(fetchUniversities(value));
+    dispatch(fetchUniversities({ universityName: value }));
   }, 500);
 
   const handleCollegeSearch = debounce((value: string) => {
-    dispatch(fetchColleges(value));
+    dispatch(fetchColleges({ search: value }));
   }, 500);
 
   const handleEntityNameSearch = (value: string) => {
@@ -244,10 +244,10 @@ const EntityEditModel = ({ open, onClose, itemId }: Props) => {
 
   useEffect(() => {
     if (watch("entityType") === "COLLEGE" && open) {
-      dispatch(fetchUniversities(''));
-      dispatch(fetchColleges(''));
+      dispatch(fetchUniversities({}));
+      dispatch(fetchColleges({}));
     } else if (watch("entityType") === "UNIVERSITY" && open) {
-      dispatch(fetchUniversities(''));
+      dispatch(fetchUniversities({}));
     }
   }, [watch("entityType"), open, dispatch]);
   // useEffect(() => {

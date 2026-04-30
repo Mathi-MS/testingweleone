@@ -569,7 +569,7 @@ const handleEntityNameSearch = debounce((value: string) => {
                   boxSx={inputForm}
                   freeSolo={true}
                   onInputChange={handleEntityNameSearch}
-                  onChange={(event, newValue) => {
+                  onChange={(_event: React.SyntheticEvent, newValue: string | null) => {
     if (watch("entityType") === "UNIVERSITY" && newValue) {
       dispatch(fetchColleges({ universityName: newValue }));
     }
