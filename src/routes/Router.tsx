@@ -180,11 +180,10 @@ const appRoutesAspire = {
   element: <PrivateRoute />,
   errorElement: <ErrorPage />,
   children: [
+    { path: "/", element: <AspireSignIn /> },
     {
-      path: "/",
       element: <AdminLayout />,
       children: [
-        { index: true, element: <AspireSignIn /> },
         { path: "dashboard", element: <Dashboard /> },
         { path: "learner-dashboard", element: <DashboardLearner /> },
         { path: "learninghub", element: <Learninghub /> },
