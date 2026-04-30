@@ -176,25 +176,45 @@ const trainerRoutes = {
   ]
 };
 
-const aspireRoutes = [
-  { path: "/", element: <AspireSignIn /> },
-  { path: "/aspire", element: <AspireSignIn /> },
-  adminRoutes,
-  trainerRoutes,
-  appRoutes,
-  { path: "*", element: <NotFound /> },
-];
-
-const weleRoutes = [
-  adminRoutes,
-  trainerRoutes,
-  appRoutes,
-  { path: "/aspire", element: <AspireSignIn /> },
-  { path: "*", element: <NotFound /> },
-];
+const appRoutesAspire = {
+  element: <PrivateRoute />,
+  errorElement: <ErrorPage />,
+  children: [
+    {
+      path: "/",
+      element: <AdminLayout />,
+      children: [
+        { index: true, element: <AspireSignIn /> },
+        { path: "dashboard", element: <Dashboard /> },
+        { path: "learner-dashboard", element: <DashboardLearner /> },
+        { path: "learninghub", element: <Learninghub /> },
+        { path: "learninghub/details/:id", element: <LearningHubDetails /> },
+        { path: "learninghub/:id/session/:sessionId", element: <SessionDetail /> },
+        { path: "community", element: <CommunityListing /> },
+        { path: "career", element: <CareerCompass /> },
+        { path: "CourseLearner", element: <CourseLearner /> },
+        { path: "course/:id", element: <CoursesDetail /> },
+        { path: "session/:sessionId", element: <SessionDetail /> },
+        { path: "masterclass", element: <MasterClass /> },
+        { path: "community/chat/:id", element: <CommunityChatInterface /> },
+        { path: "ai-chat", element: <AIChatWrapper /> },
+        { path: "ai-chat/history", element: <AIChatHistory /> },
+        { path: "blog", element: <BlogList /> },
+        { path: "blog/create", element: <CreateBlog /> },
+        { path: "blog/:id", element: <BlogDetail /> },
+        { path: "newsletter", element: <NewsLetterList /> },
+        { path: "newsletter/create", element: <CreateNewsletter /> },
+        { path: "newsletter/:id", element: <NewsletterDetail /> },
+        { path: "learnercalendar", element: <LearnerCalendar /> },
+      ],
+    }
+  ],
+};
 
 const router = createHashRouter(
-  isAspireDomain() ? aspireRoutes : weleRoutes,
+  isAspireDomain()
+    ? [appRoutesAspire, adminRoutes, trainerRoutes, { path: "*", element: <NotFound /> }]
+    : [adminRoutes, trainerRoutes, appRoutes, { path: "/aspire", element: <AspireSignIn /> }, { path: "*", element: <NotFound /> }],
   { basename: "/" }
 );
 
