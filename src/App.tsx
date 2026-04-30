@@ -16,6 +16,7 @@ import { requestForToken, onMessageListener } from "./utils/firebase";
 import { registerNotificationToken, unsubscribeNotificationToken } from "./services/notificationService";
 import NewToast from "./components/ui/newToast";
 import { AuthModal } from "./modules/auth/auth-modal";
+import AspireSignIn from "./modules/auth/aspireSignIn";
 import { isAspireDomain } from "./utils/domain";
 
 // injectStore(store, refreshTokenAsync, logout);
@@ -106,10 +107,10 @@ function InnerApp() {
         <Router />
         {/* show login modal until user gets logged in (remove this to get old method) */}
         {isInitialized && !accessToken && !isAspireDomain() && (
-          <AuthModal
-            // onSuccess={handleAuthSuccess}
-            initialTab="signin"
-          />
+          <AuthModal initialTab="signin" />
+        )}
+        {isInitialized && !accessToken && isAspireDomain() && (
+          <AspireSignIn />
         )}
         {/* ********************************** */}
       </ErrorBoundary>

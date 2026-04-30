@@ -176,23 +176,25 @@ const trainerRoutes = {
   ]
 };
 
+const aspireRoutes = [
+  { path: "/", element: <AspireSignIn /> },
+  { path: "/aspire", element: <AspireSignIn /> },
+  adminRoutes,
+  trainerRoutes,
+  appRoutes,
+  { path: "*", element: <NotFound /> },
+];
+
+const weleRoutes = [
+  adminRoutes,
+  trainerRoutes,
+  appRoutes,
+  { path: "/aspire", element: <AspireSignIn /> },
+  { path: "*", element: <NotFound /> },
+];
+
 const router = createHashRouter(
-  isAspireDomain()
-    ? [
-        { path: "/", element: <AspireSignIn /> },
-        { path: "aspire", element: <AspireSignIn /> },
-        appRoutes,
-        adminRoutes,
-        trainerRoutes,
-        { path: "*", element: <NotFound /> },
-      ]
-    : [
-        adminRoutes,
-        trainerRoutes,
-        appRoutes,
-        { path: "aspire", element: <AspireSignIn /> },
-        { path: "*", element: <NotFound /> },
-      ],
+  isAspireDomain() ? aspireRoutes : weleRoutes,
   { basename: "/" }
 );
 
