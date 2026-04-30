@@ -1,3 +1,3 @@
 export const isAspireDomain = () =>
-  window.location.hostname === "aspire.wele.in" ||
+  window.location.hostname === "testingweleone.vercel.app" ||
   window.location.hash.startsWith("#/aspire");
