@@ -193,7 +193,7 @@ export const sessionClient = communityClient;
    ====================================================== */
 
 export const authClient = createAuthedClient(
-  `https://8dcd-103-186-120-55.ngrok-free.app/graphql`
+  `https://d4ca-103-186-120-55.ngrok-free.app/graphql`
 );
 
 
